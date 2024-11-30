@@ -18,3 +18,16 @@ function getComputerChoice() {
             break;
     }
 }
+
+function getHumanChoice() {
+    let sign = prompt("Rock, Paper, or Scissors?");
+
+    while (!(sign === "Rock" || sign === "Paper" || sign === "Scissors")) {
+        sign = prompt("Please select: Rock, Paper, or Scissors?");
+    }
+
+    return sign;
+}
+
+console.log("Super Smart AI Choose....\n" + getComputerChoice());
+console.log("Human Choose....\n" + getHumanChoice());
