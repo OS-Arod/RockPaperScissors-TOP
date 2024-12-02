@@ -17,17 +17,17 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let sign = prompt("Rock, Paper, or Scissors?");
+    let sign = prompt("Rock, Paper, or Scissors?").toLowerCase();
 
-    while (!(sign === "Rock" || sign === "Paper" || sign === "Scissors")) {
-        sign = prompt("Please select: Rock, Paper, or Scissors?");
+    while (!(sign === "rock" || sign === "paper" || sign === "scissors")) {
+        sign = prompt("Please select: Rock, Paper, or Scissors?").toLowerCase();
     }
 
-    return sign;
+    // I want to return sign as the first letter Capitalized
+    return sign.charAt(0).toUpperCase() + sign.slice(1);
 }
 
 function playRound(computerChoice, humanChoice) {
-
     console.log("Super Smart AI Choose....\n" + computerChoice);
 
     if (computerChoice === "Rock" && humanChoice === "Rock") {
