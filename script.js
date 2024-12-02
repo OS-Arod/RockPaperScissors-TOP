@@ -8,13 +8,10 @@ function getComputerChoice() {
 
     switch (Choice) {
         case 0:
-            console.log("Super Smart AI Choose....\n" + "Rock");
             return "Rock"
         case 1:
-            console.log("Super Smart AI Choose....\n" + "Paper");
             return "Paper"
         case 2:
-            console.log("Super Smart AI Choose....\n" + "Scissors");
             return "Scissors"
     }
 }
@@ -30,6 +27,8 @@ function getHumanChoice() {
 }
 
 function playRound(computerChoice, humanChoice) {
+
+    console.log("Super Smart AI Choose....\n" + computerChoice);
 
     if (computerChoice === "Rock" && humanChoice === "Rock") {
         return "Draw!";
