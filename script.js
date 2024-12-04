@@ -25,15 +25,15 @@ function getHumanChoice() {
 }
 
 function playGame() {
-    while (humanScore < 5 || computerScore < 5) {
+    while (humanScore < 5 && computerScore < 5) {
         console.log("Score: " + humanScore + ";Computer Score: " + computerScore)
         console.log(playRound(getComputerChoice(), getHumanChoice()));
+    }
 
-        if (humanScore === 5) {
-            return "Final score: " + humanScore + ";\nComputer Score: " + computerScore + "\nWinner Winner!";
-        } else if (computerScore === 5){
-            return "Final score: " + humanScore + ";\nComputer Score: " + computerScore + "\nYou Lost.";
-        }
+    if (humanScore === 5) {
+        return "Final score: " + humanScore + ";\nComputer Score: " + computerScore + "\nWinner Winner!";
+    } else if (computerScore === 5){
+        return "Final score: " + humanScore + ";\nComputer Score: " + computerScore + "\nYou Lost.";
     }
 }
 
