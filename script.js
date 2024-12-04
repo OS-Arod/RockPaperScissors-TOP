@@ -24,19 +24,15 @@ function getHumanChoice() {
     return sign.charAt(0).toUpperCase() + sign.slice(1);
 }
 
-
-// TODO: Fix game logic to return the final score when a player's score reaches 5.
-// Also, remove redundant game outcome statements.
-
 function playGame() {
     while (humanScore < 5 || computerScore < 5) {
         console.log("Score: " + humanScore + ";Computer Score: " + computerScore)
         console.log(playRound(getComputerChoice(), getHumanChoice()));
 
         if (humanScore === 5) {
-            return "Winner Winner";
+            return "Final score: " + humanScore + ";\nComputer Score: " + computerScore + "\nWinner Winner!";
         } else if (computerScore === 5){
-            return "You Lost.";
+            return "Final score: " + humanScore + ";\nComputer Score: " + computerScore + "\nYou Lost.";
         }
     }
 }
