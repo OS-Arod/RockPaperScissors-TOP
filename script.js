@@ -26,19 +26,19 @@ function getHumanChoice() {
 
 function playGame() {
     while (humanScore < 5 && computerScore < 5) {
-        console.log("Score: " + humanScore + ";Computer Score: " + computerScore)
+        console.log(`Score: ${humanScore}\nComputer Score: ${computerScore}`)
         console.log(playRound(getComputerChoice(), getHumanChoice()));
     }
 
     if (humanScore === 5) {
-        return "Final score: " + humanScore + ";\nComputer Score: " + computerScore + "\nWinner Winner!";
-    } else if (computerScore === 5){
-        return "Final score: " + humanScore + ";\nComputer Score: " + computerScore + "\nYou Lost.";
+        return `Final score: ${humanScore}\nComputer Score: ${computerScore}\nWinner Winner!`;
+    } else if (computerScore === 5) {
+        return `Final score: ${humanScore}\nComputer Score: ${computerScore}\nYou Lost.`;
     }
 }
 
 function playRound(computerChoice, humanChoice) {
-    console.log("Super Smart AI Choose....\n" + computerChoice);
+    console.log(`Super Smart AI Choose....\n${computerChoice}`);
 
     if (computerChoice === "Rock" && humanChoice === "Rock") {
         return "Draw!";
@@ -68,4 +68,3 @@ function playRound(computerChoice, humanChoice) {
 }
 
 console.log(playGame());
-// console.log(playRound(getComputerChoice(), getHumanChoice()));
